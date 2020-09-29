@@ -7,14 +7,8 @@ baekjoon
 1 1 0 0 1 0 0 0 0 1 1 0 0 1 2 0 0 0 0 0 0 0 0 0 0 0
 '''
 
-
-
-
 S = input()
-alp = []
-for i in range(26):
-  alp.append(0)
+alp = [0]*26
 for i in S:
-  alp[ord(i)-97]+=1
-
-print(' '.join(map(str,alp)))
+  alp[ord(i)-ord('a')]+=1
+print(*alp)
