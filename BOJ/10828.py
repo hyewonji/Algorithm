@@ -30,18 +30,22 @@ def top():
 N = int(sys.stdin.readline().rstrip())
 stack = []
 
-for _ in range(N):
+def result():
+  for _ in range(N):
     input_split = sys.stdin.readline().rstrip().split()
 
     order = input_split[0]
 
     if order == "push":
-        push(input_split[1])
+        return input_split[1]
     elif order == "pop":
-        print(pop())
+        return pop()
     elif order == "size":
-        print(size())
+        return size()
     elif order == "empty":
-        print(empty())
+        return empty()
     elif order == "top":
-        print(top())
+        return top()
+
+ print(result())
+    
